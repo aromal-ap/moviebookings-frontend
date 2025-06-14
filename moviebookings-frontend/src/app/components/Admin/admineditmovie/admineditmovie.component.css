@@ -1,0 +1,55 @@
+/* Common styles for both Add and Edit Movie forms */
+
+.container {
+  max-width: 600px;
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+h2 {
+  font-weight: 600;
+  text-align: center;
+}
+
+hr {
+  margin-bottom: 1.5rem;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-control {
+  border-radius: 0.5rem;
+}
+
+.btn-success, .btn-secondary {
+  border-radius: 0.5rem;
+  min-width: 120px;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+}
+
+.btn-secondary:hover {
+  background-color: #5a6268;
+}
+
+.text-danger {
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.mb-3 {
+  margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}

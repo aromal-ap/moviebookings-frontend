@@ -1,0 +1,41 @@
+<div class="container mt-5">
+  <h2>Add Movie</h2>
+  <hr />
+
+  <form [formGroup]="movieForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input id="title" type="text" class="form-control" formControlName="title" />
+      <div *ngIf="submitted && f['title'].errors" class="text-danger">
+        Title is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea id="description" class="form-control" formControlName="description"></textarea>
+      <div *ngIf="submitted && f['description'].errors" class="text-danger">
+        Description is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="duration" class="form-label">Duration (minutes)</label>
+      <input id="duration" type="number" class="form-control" formControlName="duration" />
+      <div *ngIf="submitted && f['duration'].errors" class="text-danger">
+        Duration must be at least 1 minute.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="posterUrl" class="form-label">Poster URL</label>
+      <input id="posterUrl" type="text" class="form-control" formControlName="posterUrl" />
+      <div *ngIf="submitted && f['posterUrl'].errors" class="text-danger">
+        Poster URL is required.
+      </div>
+    </div>
+
+    <button class="btn btn-success" type="submit">Save Movie</button>
+    <button class="btn btn-secondary ms-2" type="button" (click)="redirect()">Cancel</button>
+  </form>
+</div>

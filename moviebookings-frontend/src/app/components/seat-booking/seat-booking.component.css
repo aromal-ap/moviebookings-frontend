@@ -1,0 +1,55 @@
+.seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 10px;
+  margin: 10px 0;
+}
+
+.seat {
+  padding: 10px;
+  background-color: lightgray;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid #999;
+}
+
+.seat.selected {
+  background-color: #4caf50;
+  color: white;
+}
+
+.seat.booked {
+  background-color: #f44336;
+  cursor: not-allowed;
+  color: white;
+}
+
+.seat.locked {
+  background-color: #ff9800;
+  cursor: not-allowed;
+  color: white;
+}
+
+
+
+
+/* .seat-grid {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.seat {
+  background-color: #ccc;
+  text-align: center;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.seat.selected {
+  background-color: #28a745;
+  color: white;
+} */

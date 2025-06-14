@@ -1,0 +1,44 @@
+<div class="container mt-4">
+  <h2>Edit Screen</h2>
+  <form [formGroup]="screenForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="screenName" class="form-label">Screen Name</label>
+      <input
+        type="text"
+        id="screenName"
+        formControlName="screen"
+        class="form-control"
+        placeholder="Eg: Screen 1"
+      />
+      <div
+        *ngIf="screenForm.get('screen')?.invalid && screenForm.get('screen')?.touched"
+        class="text-danger"
+      >
+        Screen name is required.
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <label for="totalSeats" class="form-label">Total Seats</label>
+      <input
+        type="number"
+        id="totalSeats"
+        formControlName="totalSeats"
+        class="form-control"
+        placeholder="Enter total seats"
+      />
+      <div
+        *ngIf="screenForm.get('totalSeats')?.invalid && screenForm.get('totalSeats')?.touched"
+        class="text-danger"
+      >
+        Total seats are required and must be a positive number.
+      </div>
+    </div>
+
+    <button type="submit" class="btn btn-primary me-2" [disabled]="screenForm.invalid">
+      Save Changes
+    </button>
+    <button type="button" class="btn btn-secondary" (click)="cancel()">Cancel</button>
+  </form>
+</div>
+

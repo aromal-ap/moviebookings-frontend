@@ -1,0 +1,21 @@
+<div *ngIf="booking" class="booking-container">
+  <h2>🎉 Booking Confirmed!</h2>
+
+  <div class="details-card">
+    <p><strong>Movie:</strong> {{ booking.show.movie.title }}</p>
+    <p><strong>Screen:</strong> {{ booking.show.screen.screen }}</p>
+    <p><strong>Show Time:</strong> {{ booking.show.showTime | date: 'medium' }}</p>
+    <p><strong>Seat(s):</strong> {{ seatNumbers }}</p>
+    <p><strong>Seat Price:</strong> ₹{{ booking.show.seatPrice }}</p>
+    <p><strong>Total Amount:</strong> ₹{{ totalAmount }}</p>
+  </div>
+  
+  <button (click)="downloadPdf()" class="btn-download">Download PDF</button>
+
+  <button (click)="goHome()" class="btn-home">Back to Home</button>
+</div>
+
+<div *ngIf="!booking" class="error-message">
+  <p>No booking data available. Please make a booking first.</p>
+</div>
+

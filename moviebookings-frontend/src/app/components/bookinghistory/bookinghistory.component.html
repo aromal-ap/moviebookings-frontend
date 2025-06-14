@@ -1,0 +1,16 @@
+<div class="booking-history-container">
+  <h2>Booking History</h2>
+  <div *ngIf="bookings.length > 0; else noBookings">
+    <div *ngFor="let booking of bookings" class="booking-card">
+      <h3>{{ booking.movieTitle }}</h3>
+      <p><strong>Theatre:</strong> {{ booking.theatreName }}</p>
+      <p><strong>Show Time:</strong> {{ booking.showtime | date: 'medium' }}</p>
+      <p><strong>Seats:</strong> {{ booking.seatNumber.join(', ') }}</p>
+      <p><strong>Total Amount:</strong> ₹{{ booking.totalAmount }}</p>
+      <p><strong>Status:</strong> {{ booking.paymentStatus }}</p>
+    </div>
+  </div>
+  <ng-template #noBookings>
+    <p>No bookings found.</p>
+  </ng-template>
+</div>

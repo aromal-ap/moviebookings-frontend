@@ -1,0 +1,52 @@
+/* admineditshow.component.css */
+
+.container {
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+}
+
+h2 {
+  text-align: center;
+  color: #007bff; /* Bootstrap primary color */
+  margin-bottom: 20px;
+}
+
+.form-label {
+  font-weight: 500;
+}
+
+.form-control, .form-select {
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s;
+}
+
+.form-control:focus, .form-select:focus {
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+  border-color: #007bff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border: none;
+}
+
+.text-danger {
+  font-size: 0.875rem;
+}
+
+.alert {
+  text-align: center;
+  margin-top: 20px;
+}

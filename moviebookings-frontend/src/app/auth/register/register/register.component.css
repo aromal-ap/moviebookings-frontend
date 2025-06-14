@@ -1,0 +1,9 @@
+.register-card {
+  border-radius: 1rem;
+  background-color: #fff;
+}
+
+.register-card input::placeholder {
+  font-size: 0.9rem;
+  color: #aaa;
+}

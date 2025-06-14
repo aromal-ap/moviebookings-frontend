@@ -1,0 +1,87 @@
+.card-img-top {
+  height: 300px;
+  object-fit: cover;
+  border-bottom: 1px solid #ddd;
+}
+
+.movie-card:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 1.8rem;
+}
+
+@media (max-width: 768px) {
+  .navbar .btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
+}
+
+
+
+
+/* .card-img-top {
+  height: 300px;
+  object-fit: cover;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+@media (max-width: 768px) {
+  .navbar .btn {
+    margin-top: 10px;
+    width: 100%;
+  }
+} */
+
+
+/* .landing-container {
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.auth-buttons button {
+  margin-left: 10px;
+}
+
+.movies {
+  margin-top: 30px;
+}
+
+.movie-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.movie-card {
+  border: 1px solid #ccc;
+  padding: 10px;
+  width: 150px;
+  text-align: center;
+} */

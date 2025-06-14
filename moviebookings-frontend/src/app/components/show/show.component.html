@@ -1,0 +1,18 @@
+<div class="container">
+  <h2>Available Shows</h2>
+  <div *ngFor="let show of shows" class="card">
+    <div class="poster-and-details">
+      <img [src]="show.movie.posterUrl" alt="Movie Poster" class="poster" />
+      <div class="details">
+        <p><strong>Movie:</strong> {{ show.movie.title }}</p>
+        <p><strong>Description:</strong> {{ show.movie.description }}</p>
+        <p><strong>Duration:</strong> {{ show.movie.duration }} mins</p>
+        <p><strong>Screen:</strong> {{ show.screen.screen }}</p>
+        <p><strong>Seats:</strong> {{ show.screen.totalSeats }}</p>
+        <p><strong>Price:</strong> ₹{{ show.seatPrice }}</p>
+        <p><strong>Time:</strong> {{ show.showTime | date: 'medium' }}</p>
+        <button class="btn btn-primary" (click)="bookNow(show)">Book Now</button>
+      </div>
+    </div>
+  </div>
+</div>

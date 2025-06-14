@@ -1,0 +1,45 @@
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-3">
+    <h2 class="text-primary mb-0">🎬 Manage Shows</h2>
+    <button class="btn btn-success" (click)="addShow()">
+      <i class="bi bi-plus-lg"></i> Add New Show
+    </button>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-hover align-middle">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <th>Movie</th>
+          <th>Screen</th>
+          <th>Seat Price (₹)</th>
+          <th>Show Time</th>
+          <th class="text-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let show of shows">
+          <td>{{ show.id }}</td>
+          <td>{{ show.movie?.title }}</td>
+          <td>{{ show.screen?.screen }}</td>
+          <td>{{ show.seatPrice | currency:'INR' }}</td>
+          <td>{{ show.showTime | date: 'short' }}</td>
+          <td class="text-center">
+            <button class="btn btn-sm btn-primary me-1" (click)="editShow(show)">
+              <i class="bi bi-pencil-fill"></i> Edit
+            </button>
+            <button class="btn btn-sm btn-danger" (click)="deleteShow(show.id)">
+              <i class="bi bi-trash-fill"></i> Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div *ngIf="shows.length === 0" class="alert alert-info mt-3">
+    No shows available. Please add a new show.
+  </div>
+</div>
+

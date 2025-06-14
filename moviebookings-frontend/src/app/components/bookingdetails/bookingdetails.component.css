@@ -1,0 +1,36 @@
+.booking-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 24px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.details-card {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.btn-home {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  background-color: #1976d2;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.btn-home:hover {
+  background-color: #145ea8;
+}
+
+.error-message {
+  text-align: center;
+  margin-top: 40px;
+  color: red;
+  font-weight: bold;
+}

@@ -1,0 +1,28 @@
+<div class="container" *ngIf="movieTitle && posterUrl && screenName && seatPrice && showTime">
+  <h2>{{ movieTitle }}</h2>
+  <img [src]="posterUrl" alt="Poster" width="150" />
+  <p><strong>Screen:</strong> {{ screenName }}</p>
+  <p><strong>Time:</strong> {{ showTime | date: 'medium' }}</p>
+  <p><strong>Price per seat:</strong> ₹{{ seatPrice }}</p>
+  <h4>Select Seats:</h4>
+  
+  <div class="seat-grid">
+    <div
+      class="seat"
+      *ngFor="let seat of availableSeats"
+      [class.selected]="selectedSeats.includes(seat)"
+      [class.booked]="seat.seatStatus === 'BOOKED'"
+      [class.locked]="seat.seatStatus === 'LOCKED'"
+      (click)="toggleSeat(seat)">
+      {{ seat.seatNumber }}
+    </div>
+  </div>
+
+    <div *ngIf="selectedSeats.length">
+       <h5>Selected Seats: {{ selectedSeatNames }}</h5>
+       <p>Total: ₹{{ totalAmount }}</p>
+       <button class="btn btn-success" (click)="confirmBooking()">Confirm Booking</button>
+    </div>
+
+</div>
+

@@ -1,0 +1,66 @@
+/* General Card Styling */
+.movie-card {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Movie Poster Styling */
+.movie-card img {
+  object-fit: cover;
+  height: 300px;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+}
+
+/* Card Body Styling */
+.movie-card .card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Title Styling */
+.movie-card .card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Description Styling */
+.movie-card .card-text {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+/* Buttons */
+.btn-success {
+  font-weight: 500;
+}
+
+.btn-warning {
+  color: #fff;
+  font-weight: 500;
+}
+
+.btn-danger {
+  font-weight: 500;
+}
+
+/* Add Movie Button Spacing */
+.container .btn-success {
+  min-width: 150px;
+}
+
+/* Add some spacing to Edit and Delete buttons */
+.movie-card .btn {
+  width: 100%;
+}
+
+/* Adjust spacing between buttons */
+.movie-card .btn + .btn {
+  margin-top: 0.5rem;
+}
