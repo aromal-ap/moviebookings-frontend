@@ -34,7 +34,13 @@ export class LoginComponent {
         }
       },
       error: (err) => {
-        this.errorMessage = 'Invalid email or password';
+        //console.error(err.error.token);
+        //console.error(err.error);
+        if (err.error && err.error.token === 'Your account is blocked. Please contact admin.') {
+         this.errorMessage = 'Your account is blocked. Please contact the administrator.';
+        }else {
+         this.errorMessage = 'Invalid email or password';
+        }
       }
     });
   }

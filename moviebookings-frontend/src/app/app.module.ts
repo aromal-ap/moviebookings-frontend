@@ -26,6 +26,8 @@ import { AdmineditshowComponent } from './components/Admin/admineditshow/admined
 import { ManagescreensComponent } from './components/Admin/managescreens/managescreens.component';
 import { AdminaddscreenComponent } from './components/Admin/adminaddscreen/adminaddscreen.component';
 import { AdmineditscreenComponent } from './components/Admin/admineditscreen/admineditscreen.component';
+import { ForgotpasswordComponent } from './auth/forgotpassword/forgotpassword.component';
+import { ManageusersComponent } from './components/Admin/manageusers/manageusers.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,9 @@ import { AdmineditscreenComponent } from './components/Admin/admineditscreen/adm
     AdmineditshowComponent,
     ManagescreensComponent,
     AdminaddscreenComponent,
-    AdmineditscreenComponent
+    AdmineditscreenComponent,
+    ForgotpasswordComponent,
+    ManageusersComponent
   ],
   imports: [
     BrowserModule,

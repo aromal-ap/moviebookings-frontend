@@ -1,0 +1,33 @@
+<div class="container mt-4">
+  <h3 class="mb-4">Manage Users</h3>
+
+  <table class="table table-bordered table-hover">
+    <thead class="table-light">
+      <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Role</th>
+        <th>Status</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.role }}</td>
+        <td>
+          <span [class.text-success]="user.enabled" [class.text-danger]="!user.enabled">
+            {{ user.enabled ? 'Active' : 'Blocked' }}
+          </span>
+        </td>
+        <td>
+          <button (click)="toggleStatus(user)" class="btn btn-sm btn-warning">
+            {{ user.enabled ? 'Block' : 'Unblock' }}
+        </button>
+          <button (click)="deleteUser(user.email)" class="btn btn-sm btn-danger ms-2">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

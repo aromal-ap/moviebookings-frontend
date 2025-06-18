@@ -9,8 +9,28 @@ import { text } from 'node:stream/consumers';
 export class ProfileService {
 
   private baseUrl='http://localhost:8080/api/profile';
+  private adminUrl='http://localhost:8080/api/admin';
   constructor(private http:HttpClient) { }
 
+  //admin user management
+  toggleUserStatus(email: string): Observable<any> {
+  return this.http.put(`${this.adminUrl}/${email}/toggle-status`, {},{
+    headers:this.getTokenHeader()});
+  };
+
+  getAllUsers():Observable<any[]>{
+    return this.http.get<any[]>(`${this.adminUrl}/users`,{
+      headers:this.getTokenHeader()
+    });
+  }
+
+  deleteUser(email:string): Observable<any> {
+    return this.http.delete(`${this.adminUrl}/${email}`,{
+      headers:this.getTokenHeader()
+    });
+  }
+  
+  //user management
   getTokenHeader():HttpHeaders{
     const token=localStorage.getItem('token');
     return new HttpHeaders({'Authorization': `Bearer ${token}`});

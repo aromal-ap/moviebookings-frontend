@@ -15,6 +15,13 @@ export class AuthService {
 
   constructor(private http: HttpClient) { }
   
+
+  resetPassword(email:string,newPassword:string):Observable<any>{
+    return this.http.put<any>(`${this.baseUrl}/reset-password`,{
+      email:email,
+      newPassword:newPassword
+    });
+  }
   
   getEmailFromToken(): string {
     const token = localStorage.getItem('token');
